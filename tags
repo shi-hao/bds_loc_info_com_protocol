@@ -1,0 +1,152 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BDS_DATASTRUCT	bds_DataStruct.h	10;"	d
+BDS_DATA_PROC_H	bds_data_proc.h	10;"	d
+BYTE	bds_DataStruct.h	14;"	d
+DWORD	bds_DataStruct.h	18;"	d
+DataPacketInByte	bds_data_proc.c	/^int  DataPacketInByte(unsigned char *DataHead, int HeadLen,  \/\/消息头内存指针和长度 $/;"	f	signature:(unsigned char *DataHead, int HeadLen, unsigned char *DataBody, int BodyLen, unsigned char* SndBuff, int size)
+DataPacketInByte	bds_data_proc.h	/^int  DataPacketInByte(unsigned char *DataHead, int HeadLen,  \/\/消息头内存指针和长度 $/;"	p	signature:(unsigned char *DataHead, int HeadLen, unsigned char *DataBody, int BodyLen, unsigned char* SndBuff, int size)
+Debug	test.c	8;"	d	file:
+Debug	test2.c	7;"	d	file:
+MarkChar	bds_DataStruct.h	22;"	d
+MarkCharJunior	bds_DataStruct.h	23;"	d
+MaxLenInByte	bds_DataStruct.h	25;"	d
+SRC	Makefile	/^SRC:=test2.c bds_data_proc.c$/;"	m
+STRING	bds_DataStruct.h	20;"	d
+WORD	bds_DataStruct.h	16;"	d
+__anon1::msg_body_prop	bds_DataStruct.h	/^	BYTE  msg_body_prop[2];      \/\/消息体属性$/;"	m	struct:__anon1	access:public
+__anon1::msg_id	bds_DataStruct.h	/^	BYTE  msg_id[2];                  \/\/消息id$/;"	m	struct:__anon1	access:public
+__anon1::msg_packet_num	bds_DataStruct.h	/^	BYTE  msg_packet_num[2];     \/\/分包序号$/;"	m	struct:__anon1	access:public
+__anon1::msg_packet_sum	bds_DataStruct.h	/^	BYTE  msg_packet_sum[2];     \/\/总包数$/;"	m	struct:__anon1	access:public
+__anon1::msg_serial_num	bds_DataStruct.h	/^	BYTE  msg_serial_num[2];     \/\/消息序列号$/;"	m	struct:__anon1	access:public
+__anon1::phone_num	bds_DataStruct.h	/^	BYTE  phone_num[10];            \/\/电话号码$/;"	m	struct:__anon1	access:public
+__anon1::terminal_type	bds_DataStruct.h	/^	BYTE terminal_type;      \/\/终端类型$/;"	m	struct:__anon1	access:public
+__anon2::carrier_code	bds_DataStruct.h	/^    BYTE carrier_code[20];	$/;"	m	struct:__anon2	access:public
+__anon2::manufacturer_code	bds_DataStruct.h	/^	BYTE manufacturer_code[18];$/;"	m	struct:__anon2	access:public
+__anon2::manufacturer_country	bds_DataStruct.h	/^	BYTE manufacturer_country[1];$/;"	m	struct:__anon2	access:public
+__anon2::police_org_code	bds_DataStruct.h	/^	BYTE police_org_code[6];$/;"	m	struct:__anon2	access:public
+__anon2::terminal_id	bds_DataStruct.h	/^	BYTE terminal_id[20];$/;"	m	struct:__anon2	access:public
+__anon2::terminal_model	bds_DataStruct.h	/^	BYTE terminal_model[20];$/;"	m	struct:__anon2	access:public
+__anon3::auth_code	bds_DataStruct.h	/^	BYTE auth_code[40];$/;"	m	struct:__anon3	access:public
+__anon3::res_serial_num	bds_DataStruct.h	/^	BYTE res_serial_num[2];$/;"	m	struct:__anon3	access:public
+__anon3::result	bds_DataStruct.h	/^	BYTE result;$/;"	m	struct:__anon3	access:public
+__anon4::alarm_flg	bds_DataStruct.h	/^	BYTE  alarm_flg[4];  \/\/报警标志$/;"	m	struct:__anon4	access:public
+__anon4::direction	bds_DataStruct.h	/^	BYTE  direction[2];  \/\/方向$/;"	m	struct:__anon4	access:public
+__anon4::height	bds_DataStruct.h	/^	BYTE  height[2];     \/\/高度$/;"	m	struct:__anon4	access:public
+__anon4::lat	bds_DataStruct.h	/^	BYTE  lat[4];        \/\/纬度$/;"	m	struct:__anon4	access:public
+__anon4::lng	bds_DataStruct.h	/^	BYTE  lng[4];        \/\/经度$/;"	m	struct:__anon4	access:public
+__anon4::pdop	bds_DataStruct.h	/^	BYTE  pdop[2];       \/\/pdop$/;"	m	struct:__anon4	access:public
+__anon4::speed	bds_DataStruct.h	/^	BYTE  speed[2];      \/\/速度$/;"	m	struct:__anon4	access:public
+__anon4::stat	bds_DataStruct.h	/^	BYTE  stat[4];       \/\/状态$/;"	m	struct:__anon4	access:public
+__anon4::time	bds_DataStruct.h	/^	BYTE  time[6];       \/\/YY-MM-DD-hh-mm-ss$/;"	m	struct:__anon4	access:public
+__anon5::id	bds_DataStruct.h	/^	BYTE id;       \/\/附加信息id$/;"	m	struct:__anon5	access:public
+__anon5::info	bds_DataStruct.h	/^	BYTE info[7];  \/\/附加信息$/;"	m	struct:__anon5	access:public
+__anon5::len	bds_DataStruct.h	/^	BYTE len;      \/\/附加信息长度$/;"	m	struct:__anon5	access:public
+__anon6::msg_id	bds_DataStruct.h	/^	BYTE msg_id[2];$/;"	m	struct:__anon6	access:public
+__anon6::result	bds_DataStruct.h	/^	BYTE result;$/;"	m	struct:__anon6	access:public
+__anon6::serial_num	bds_DataStruct.h	/^	BYTE serial_num[2];$/;"	m	struct:__anon6	access:public
+alarm_flg	bds_DataStruct.h	/^	BYTE  alarm_flg[4];  \/\/报警标志$/;"	m	struct:__anon4	access:public
+auth_code	bds_DataStruct.h	/^	BYTE auth_code[40];$/;"	m	struct:__anon3	access:public
+cal_check_code	bds_data_proc.c	/^BYTE cal_check_code($/;"	f	signature:( unsigned char* data, int data_size )
+cal_check_code	bds_data_proc.h	/^BYTE cal_check_code($/;"	p	signature:( unsigned char* data, int data_size )
+cal_msg_len	bds_data_proc.c	/^int  cal_msg_len($/;"	f	signature:( unsigned char* buf, int buf_size)
+cal_msg_len	bds_data_proc.h	/^int  cal_msg_len($/;"	p	signature:( unsigned char* buf, int buf_size)
+carrier_code	bds_DataStruct.h	/^    BYTE carrier_code[20];	$/;"	m	struct:__anon2	access:public
+cmd_proc	test2.c	/^int cmd_proc(unsigned char *buf, int size){$/;"	f	signature:(unsigned char *buf, int size)
+data_proc	test2.c	/^int data_proc(unsigned char* buf, int size){$/;"	f	signature:(unsigned char* buf, int size)
+direction	bds_DataStruct.h	/^	BYTE  direction[2];  \/\/方向$/;"	m	struct:__anon4	access:public
+get16	bds_data_proc.c	/^WORD get16(unsigned char *cp)$/;"	f	signature:(unsigned char *cp)
+get16	bds_data_proc.h	/^WORD get16(unsigned char *cp);$/;"	p	signature:(unsigned char *cp)
+get32	bds_data_proc.c	/^DWORD  get32(unsigned char *cp)$/;"	f	signature:(unsigned char *cp)
+get32	bds_data_proc.h	/^DWORD  get32(unsigned char *cp);$/;"	p	signature:(unsigned char *cp)
+glo_data_buf	test2.c	/^unsigned char glo_data_buf[glo_data_buf_size];$/;"	v
+glo_data_buf_pos	test2.c	/^int           glo_data_buf_pos = 0;$/;"	v
+glo_data_buf_size	test2.c	10;"	d	file:
+glo_serial_num	test.c	/^WORD glo_serial_num=0;$/;"	v
+glo_serial_num	test2.c	/^WORD glo_serial_num=0;$/;"	v
+height	bds_DataStruct.h	/^	BYTE  height[2];     \/\/高度$/;"	m	struct:__anon4	access:public
+id	bds_DataStruct.h	/^	BYTE id;       \/\/附加信息id$/;"	m	struct:__anon5	access:public
+info	bds_DataStruct.h	/^	BYTE info[7];  \/\/附加信息$/;"	m	struct:__anon5	access:public
+lat	bds_DataStruct.h	/^	BYTE  lat[4];        \/\/纬度$/;"	m	struct:__anon4	access:public
+len	bds_DataStruct.h	/^	BYTE len;      \/\/附加信息长度$/;"	m	struct:__anon5	access:public
+lng	bds_DataStruct.h	/^	BYTE  lng[4];        \/\/经度$/;"	m	struct:__anon4	access:public
+main	test.c	/^int main(){$/;"	f
+main	test2.c	/^int main(){$/;"	f
+manufacturer_code	bds_DataStruct.h	/^	BYTE manufacturer_code[18];$/;"	m	struct:__anon2	access:public
+manufacturer_country	bds_DataStruct.h	/^	BYTE manufacturer_country[1];$/;"	m	struct:__anon2	access:public
+msg_body_prop	bds_DataStruct.h	/^	BYTE  msg_body_prop[2];      \/\/消息体属性$/;"	m	struct:__anon1	access:public
+msg_head	bds_DataStruct.h	/^} msg_head, *msg_head_p;$/;"	t	typeref:struct:__anon1
+msg_head_p	bds_DataStruct.h	/^} msg_head, *msg_head_p;$/;"	t	typeref:struct:__anon1
+msg_head_size_inByte	bds_DataStruct.h	44;"	d
+msg_id	bds_DataStruct.h	/^	BYTE  msg_id[2];                  \/\/消息id$/;"	m	struct:__anon1	access:public
+msg_id	bds_DataStruct.h	/^	BYTE msg_id[2];$/;"	m	struct:__anon6	access:public
+msg_id_auth	bds_DataStruct.h	50;"	d
+msg_id_heartBeat	bds_DataStruct.h	51;"	d
+msg_id_loc_report	bds_DataStruct.h	52;"	d
+msg_id_reg	bds_DataStruct.h	47;"	d
+msg_id_reg_res	bds_DataStruct.h	48;"	d
+msg_id_server_general	bds_DataStruct.h	53;"	d
+msg_id_terminal_general	bds_DataStruct.h	54;"	d
+msg_id_unreg	bds_DataStruct.h	49;"	d
+msg_packet_num	bds_DataStruct.h	/^	BYTE  msg_packet_num[2];     \/\/分包序号$/;"	m	struct:__anon1	access:public
+msg_packet_sum	bds_DataStruct.h	/^	BYTE  msg_packet_sum[2];     \/\/总包数$/;"	m	struct:__anon1	access:public
+msg_serial_num	bds_DataStruct.h	/^	BYTE  msg_serial_num[2];     \/\/消息序列号$/;"	m	struct:__anon1	access:public
+myprintf	bds_data_proc.c	/^int myprintf($/;"	f	signature:( unsigned char* string, unsigned char* data, int data_size)
+myprintf	bds_data_proc.h	/^int myprintf($/;"	p	signature:( unsigned char* string, unsigned char* data, int data_size)
+pdop	bds_DataStruct.h	/^	BYTE  pdop[2];       \/\/pdop$/;"	m	struct:__anon4	access:public
+phone_num	bds_DataStruct.h	/^	BYTE  phone_num[10];            \/\/电话号码$/;"	m	struct:__anon1	access:public
+police_org_code	bds_DataStruct.h	/^	BYTE police_org_code[6];$/;"	m	struct:__anon2	access:public
+prog	Makefile	/^prog:=run$/;"	m
+put16	bds_data_proc.c	/^unsigned char* put16($/;"	f	signature:( unsigned char *cp, WORD x)
+put16	bds_data_proc.h	/^unsigned char* put16(unsigned char* cp, WORD x);$/;"	p	signature:(unsigned char* cp, WORD x)
+put32	bds_data_proc.c	/^unsigned char* put32($/;"	f	signature:( unsigned char* cp, DWORD x)
+put32	bds_data_proc.h	/^unsigned char* put32(unsigned char* cp, DWORD x);$/;"	p	signature:(unsigned char* cp, DWORD x)
+read_msg_packet_flg	bds_DataStruct.h	96;"	d
+res_serial_num	bds_DataStruct.h	/^	BYTE res_serial_num[2];$/;"	m	struct:__anon3	access:public
+result	bds_DataStruct.h	/^	BYTE result;$/;"	m	struct:__anon3	access:public
+result	bds_DataStruct.h	/^	BYTE result;$/;"	m	struct:__anon6	access:public
+reverse_escape_char	bds_data_proc.c	/^int reverse_escape_char($/;"	f	signature:( unsigned char* buf, int size)
+reverse_escape_char	bds_data_proc.h	/^int reverse_escape_char($/;"	p	signature:( unsigned char* buf, int size)
+serial_num	bds_DataStruct.h	/^	BYTE serial_num[2];$/;"	m	struct:__anon6	access:public
+server_res_general	bds_DataStruct.h	/^} server_res_general, *server_res_general_p;$/;"	t	typeref:struct:__anon6
+server_res_general_p	bds_DataStruct.h	/^} server_res_general, *server_res_general_p;$/;"	t	typeref:struct:__anon6
+set_msg_body_len	bds_DataStruct.h	73;"	d
+set_msg_enc_sm1	bds_DataStruct.h	82;"	d
+set_msg_enc_sm2	bds_DataStruct.h	76;"	d
+set_msg_enc_sm4	bds_DataStruct.h	79;"	d
+set_msg_net_c	bds_DataStruct.h	85;"	d
+set_msg_net_p	bds_DataStruct.h	88;"	d
+set_msg_packet_flg	bds_DataStruct.h	93;"	d
+shenyang_ver	bds_DataStruct.h	12;"	d
+speed	bds_DataStruct.h	/^	BYTE  speed[2];      \/\/速度$/;"	m	struct:__anon4	access:public
+stat	bds_DataStruct.h	/^	BYTE  stat[4];       \/\/状态$/;"	m	struct:__anon4	access:public
+terminal_id	bds_DataStruct.h	/^	BYTE terminal_id[20];$/;"	m	struct:__anon2	access:public
+terminal_loc_attach	bds_DataStruct.h	/^} terminal_loc_attach, *terminal_loc_attach_p;$/;"	t	typeref:struct:__anon5
+terminal_loc_attach_p	bds_DataStruct.h	/^} terminal_loc_attach, *terminal_loc_attach_p;$/;"	t	typeref:struct:__anon5
+terminal_loc_report	bds_DataStruct.h	/^} terminal_loc_report, *terminal_loc_report_p;$/;"	t	typeref:struct:__anon4
+terminal_loc_report_basic_len	bds_DataStruct.h	121;"	d
+terminal_loc_report_p	bds_DataStruct.h	/^} terminal_loc_report, *terminal_loc_report_p;$/;"	t	typeref:struct:__anon4
+terminal_model	bds_DataStruct.h	/^	BYTE terminal_model[20];$/;"	m	struct:__anon2	access:public
+terminal_reg	bds_DataStruct.h	/^} terminal_reg, *terminal_reg_p;$/;"	t	typeref:struct:__anon2
+terminal_reg_basic_len	bds_DataStruct.h	99;"	d
+terminal_reg_p	bds_DataStruct.h	/^} terminal_reg, *terminal_reg_p;$/;"	t	typeref:struct:__anon2
+terminal_reg_res	bds_DataStruct.h	/^} terminal_reg_res, *terminal_reg_res_p;$/;"	t	typeref:struct:__anon3
+terminal_reg_res_p	bds_DataStruct.h	/^} terminal_reg_res, *terminal_reg_res_p;$/;"	t	typeref:struct:__anon3
+terminal_type	bds_DataStruct.h	/^	BYTE terminal_type;      \/\/终端类型$/;"	m	struct:__anon1	access:public
+terminal_type_car_ns	bds_DataStruct.h	58;"	d
+terminal_type_car_s	bds_DataStruct.h	57;"	d
+terminal_type_command	bds_DataStruct.h	63;"	d
+terminal_type_hand_ns	bds_DataStruct.h	60;"	d
+terminal_type_hand_s	bds_DataStruct.h	59;"	d
+terminal_type_others	bds_DataStruct.h	66;"	d
+terminal_type_pdt	bds_DataStruct.h	64;"	d
+terminal_type_ship_ns	bds_DataStruct.h	62;"	d
+terminal_type_ship_s	bds_DataStruct.h	61;"	d
+terminal_type_time	bds_DataStruct.h	65;"	d
+time	bds_DataStruct.h	/^	BYTE  time[6];       \/\/YY-MM-DD-hh-mm-ss$/;"	m	struct:__anon4	access:public
+verify_check_code	bds_data_proc.c	/^int verify_check_code($/;"	f	signature:( unsigned char* data, int data_size )
+verify_check_code	bds_data_proc.h	/^int verify_check_code($/;"	p	signature:( unsigned char* data, int data_size )
