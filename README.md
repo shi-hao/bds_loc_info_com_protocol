@@ -22,3 +22,6 @@
 		bds_DataStruct.h                 -->主要结构体定义  
 		main_test.c                      -->测试范例    
 		Makefile                         -->编译makefile
+
+## 4.联系方式  
+		email：shi7631470@163.com
