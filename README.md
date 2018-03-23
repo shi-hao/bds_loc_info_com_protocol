@@ -6,9 +6,9 @@
 
 2. 编译方法
 >linux  
-	make    
-生成可执行文件main。
-	./main    
+		make      
+生成可执行文件main。 
+		./main   
 执行可执行文件。
 
 >win  
@@ -17,7 +17,7 @@
 3.  源码说明
 使用C语言结构体定义各种通信指令，结构体成员均采用char类型数组避免结构体对齐产生的冗余字节的问题，使用get16，get32和put16，put32来转换大小端字节序。
 
-	bds_data_proc.c  bds_data_proc.h -->主要接口实现  
-	bds_DataStruct.h                 -->主要结构体定义  
-	main_test.c                      -->测试范例    
-	Makefile                         -->编译makefile
+		bds_data_proc.c  bds_data_proc.h -->主要接口实现  
+		bds_DataStruct.h                 -->主要结构体定义  
+		main_test.c                      -->测试范例    
+		Makefile                         -->编译makefile
