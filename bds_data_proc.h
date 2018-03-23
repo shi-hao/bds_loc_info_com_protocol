@@ -1,6 +1,7 @@
 /*
  *警用北斗全球卫星导航系统 第6部分：定位信息通信协议及数据格式
  *author: 时
+ *email : shi7631470@163.com
  *description：接口实现
 
  *BSD 3-Clause License
