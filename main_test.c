@@ -63,14 +63,14 @@ int cmd_proc(unsigned char *buf, int size){
 
 		//消息id
 		msg_id = get16(head->msg_id);
-		printf("recv msg id : %#x \n", msg_id);
+		printf("\n recv msg id : %#x \n", msg_id);
 
 		//终端类型
 		term_type = head->terminal_type; 
-		printf("terminal type : %#x \n", term_type);
+		printf("\n terminal type : %#x \n", term_type);
 
 	}else{
-		printf("checke code error\n");
+		printf("\n checke code error\n");
 	}
 }
 
