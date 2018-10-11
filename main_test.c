@@ -45,11 +45,11 @@ WORD     glo_serial_num=0;
 
 //global data process buf 
 #define       glo_data_buf_size  2048
-unsigned char glo_data_buf[glo_data_buf_size];
-int           glo_data_buf_pos = 0;
+static unsigned char glo_data_buf[glo_data_buf_size];
+static int           glo_data_buf_pos = 0;
 
 //command process
-int cmd_proc(unsigned char *buf, int size){
+static int bds_cmd_proc(unsigned char *buf, int size){
 
 	int ret;
 	unsigned char  term_type;
@@ -75,7 +75,7 @@ int cmd_proc(unsigned char *buf, int size){
 }
 
 //data process
-int data_proc(unsigned char* buf, int size){
+static int bds_data_proc(unsigned char* buf, int size){
 	int cnt;
 	for(cnt=0;cnt<size;cnt++){
 		if(buf[cnt] != MarkChar){
@@ -85,7 +85,11 @@ int data_proc(unsigned char* buf, int size){
 				glo_data_buf_pos = 0;
 			}
 		}else{
-			cmd_proc(glo_data_buf, glo_data_buf_pos);
+			if(glo_data_buf_pos > 0)
+			{
+				printf("\n call bds_cmd_proc \n");
+				bds_cmd_proc(glo_data_buf, glo_data_buf_pos);
+			}
 			glo_data_buf_pos = 0;
 		}
 	}
@@ -93,7 +97,6 @@ int data_proc(unsigned char* buf, int size){
 
 //main
 int main(){
-
 	int res,cnt;
 	unsigned char* p;
 	unsigned char serial_data[1024 * 4];
@@ -176,7 +179,6 @@ int main(){
 			buf, 1024);
 
 #if Debug
-	//输出消息头
 	printf("\n============%ld byte msg head===============\n ",sizeof(my_msg_head));
 	printf("\n============%ld byte msg body===============\n ",sizeof(my_terminal_reg));
 	printf("\n============%d byte sum data===============\n ",res);
@@ -184,6 +186,8 @@ int main(){
 	for(cnt=0;cnt<res;cnt++)
 		printf("0X%02x ", *p++);
 #endif
+
+	//数据发送，此处仅作数据拷贝
 	memcpy(serial_data+1024, buf, 1024);
 
 	/*
@@ -213,7 +217,6 @@ int main(){
 			buf, 1024);
 
 #if Debug
-	//输出消息头
 	printf("\n============%ld byte msg head===============\n ",sizeof(my_msg_head));
 	printf("\n============%ld byte msg body===============\n ",sizeof(my_terminal_loc_report));
 	printf("\n============%d byte sum data===============\n ",res);
@@ -221,11 +224,12 @@ int main(){
 	for(cnt=0;cnt<res;cnt++)
 		printf("0X%02x ", *p++);
 #endif
+
+	//数据发送，此处仅作数据拷贝
 	memcpy(serial_data+2048, buf, 1024);
 
 	//process serial data 
-	for(cnt=0;(cnt+256)<=(1024*4);cnt+=256)
-		data_proc(serial_data+cnt, 256);
+	bds_data_proc(serial_data, 1024*4);
 
 	return 1;
 }
