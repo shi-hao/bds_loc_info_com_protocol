@@ -25,3 +25,4 @@
 
 ## 4.联系方式  
 		email：shi7631470@163.com
+<img src="https://github.com/shi-hao/c_language_study/blob/master/chatME.jpg" width="250" height="400" />
