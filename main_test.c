@@ -62,7 +62,7 @@ static int bds_cmd_proc(unsigned char *buf, int size){
 		head =(msg_head_p)buf;
 
 		//消息id
-		msg_id = get16(head->msg_id);
+		msg_id = bds_get16(head->msg_id);
 		printf("\n recv msg id : %#x \n", msg_id);
 
 		//终端类型
@@ -135,15 +135,15 @@ int main(){
 	memset(&my_terminal_loc_report,0,sizeof(my_terminal_loc_report));
 
 	//填充基本信息
-	put32(my_terminal_loc_report.alarm_flg, 0xffffffff);
-	put32(my_terminal_loc_report.stat, 0xffffffff);
-	put32(my_terminal_loc_report.lat, 0xffffffff);
-	put32(my_terminal_loc_report.lng, 0xffffffff);
-	put16(my_terminal_loc_report.height, 1000);
-	put16(my_terminal_loc_report.speed, 90);
-	put16(my_terminal_loc_report.direction, 90);
+	bds_put32(my_terminal_loc_report.alarm_flg, 0xffffffff);
+	bds_put32(my_terminal_loc_report.stat, 0xffffffff);
+	bds_put32(my_terminal_loc_report.lat, 0xffffffff);
+	bds_put32(my_terminal_loc_report.lng, 0xffffffff);
+	bds_put16(my_terminal_loc_report.height, 1000);
+	bds_put16(my_terminal_loc_report.speed, 90);
+	bds_put16(my_terminal_loc_report.direction, 90);
 	memcpy(my_terminal_loc_report.time, tmp_time, sizeof(my_terminal_loc_report.time));
-	put16(my_terminal_loc_report.pdop, 1);
+	bds_put16(my_terminal_loc_report.pdop, 1);
 
 	//填充附加信息
 	my_terminal_loc_attach.id = 0x00;
@@ -162,9 +162,9 @@ int main(){
 	memset(&my_msg_head,0,sizeof(my_msg_head));
 
 	//填充消息头
-	put16(my_msg_head.msg_id, msg_id_reg);
+	bds_put16(my_msg_head.msg_id, msg_id_reg);
 	my_msg_head.terminal_type=terminal_type_car_ns; //终端类型
-	put16(my_msg_head.msg_serial_num, glo_serial_num);//流水号
+	bds_put16(my_msg_head.msg_serial_num, glo_serial_num);//流水号
 
 	set_msg_net_c(my_msg_body_prop);   //设置数据传输方式
 	set_msg_enc_sm1(my_msg_body_prop); //设置加密模式
@@ -172,7 +172,7 @@ int main(){
 	tmp_msg_body_size = sizeof(my_terminal_reg); //计算消息体长度
 	set_msg_body_len(my_msg_body_prop, tmp_msg_body_size); //设置消息体的长度
 	set_msg_packet_flg(my_msg_body_prop, 0); //设置消息分包标志
-	put16(my_msg_head.msg_body_prop, my_msg_body_prop);
+	bds_put16(my_msg_head.msg_body_prop, my_msg_body_prop);
 
 	res = DataPacketInByte((unsigned char *)&my_msg_head, sizeof(my_msg_head),
 			(unsigned char *)&my_terminal_reg,sizeof(my_terminal_reg),
@@ -200,9 +200,9 @@ int main(){
 	memset(buf, 0, 1024);
 
 	//填充消息头
-	put16(my_msg_head.msg_id, msg_id_loc_report);
+	bds_put16(my_msg_head.msg_id, msg_id_loc_report);
 	my_msg_head.terminal_type=terminal_type_car_ns; //终端类型
-	put16(my_msg_head.msg_serial_num, glo_serial_num);//流水号
+	bds_put16(my_msg_head.msg_serial_num, glo_serial_num);//流水号
 
 	set_msg_net_c(my_msg_body_prop);   //设置数据传输方式
 	set_msg_enc_sm1(my_msg_body_prop); //设置加密模式
@@ -210,7 +210,7 @@ int main(){
 	tmp_msg_body_size = sizeof(my_terminal_loc_report); //计算消息体长度
 	set_msg_body_len(my_msg_body_prop, tmp_msg_body_size); //设置消息体的长度
 	set_msg_packet_flg(my_msg_body_prop, 0); //设置消息分包标志
-	put16(my_msg_head.msg_body_prop, my_msg_body_prop);
+	bds_put16(my_msg_head.msg_body_prop, my_msg_body_prop);
 
 	res = DataPacketInByte((unsigned char *)&my_msg_head, sizeof(my_msg_head),
 			(unsigned char *)&my_terminal_loc_report,sizeof(my_terminal_loc_report),

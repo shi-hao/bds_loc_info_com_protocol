@@ -40,7 +40,7 @@
 #include<string.h>
 
 /* Put a short in host order into a char array in network order *uint8 */
-unsigned char* put32(
+unsigned char* bds_put32(
 		unsigned char* cp,
 		DWORD  x)
 {
@@ -51,7 +51,7 @@ unsigned char* put32(
 	return cp; 
 }                                                                                                                  
 /* Put a short in host order into a char array in network order *uint8 */
-unsigned char* put16(
+unsigned char* bds_put16(
 		unsigned char *cp,
 		WORD  x)
 {
@@ -61,7 +61,7 @@ unsigned char* put16(
 	return cp; 
 }
 
-WORD get16(unsigned char *cp)
+WORD bds_get16(unsigned char *cp)
 {
 	WORD x;
 
@@ -72,7 +72,7 @@ WORD get16(unsigned char *cp)
 }
 
 /* Machine-independent, alignment insensitive network-to-host long conversion */
-DWORD  get32(unsigned char *cp)
+DWORD  bds_get32(unsigned char *cp)
 {
 	DWORD rval;
 
@@ -93,15 +93,9 @@ BYTE cal_check_code(
 		int   data_size)
 {
 	BYTE check_code=0;
-	int cnt;
-	if(data_size < 1)
-	{
-		printf("cal_check_code size error\n");
-		return -1;
-	}
 
 	//异或计算校验码
-	for(cnt=0;cnt<data_size;cnt++){
+	for(int cnt=0;cnt<data_size;cnt++){
 		check_code = check_code ^ data[cnt];
 	}
 
@@ -109,22 +103,15 @@ BYTE cal_check_code(
 }
 
 //校验--数据的尾部1字节是校验码
+//返回0校验通过
 int verify_check_code(
 		unsigned char* data,
 		int            data_size
 		){
 	BYTE check_code=0;
 
-	if(data_size < 2){
-		printf("verify_check_code size error\n");
-		return -1;
-	}
-
-	check_code = cal_check_code(data, data_size-1);
-	if(check_code == data[data_size - 1])
-		return 0;
-	else
-		return -1;
+	check_code = cal_check_code(data, data_size);
+	return check_code;
 }
 
 //转义还原 

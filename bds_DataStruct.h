@@ -53,6 +53,13 @@
 
 #define  MaxLenInByte     
 
+typedef struct {
+	int capacity;
+	int len;
+	int offset;
+	unsigned char* data;
+}bds_buffer, *bds_buff_p;
+
 /*
  *消息头格式
  */

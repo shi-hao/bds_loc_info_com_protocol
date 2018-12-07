@@ -39,11 +39,11 @@
 
 #include"bds_DataStruct.h"
 
-unsigned char* put32(unsigned char* cp, DWORD x);
-unsigned char* put16(unsigned char* cp, WORD x);
+unsigned char* bds_put32(unsigned char* cp, DWORD x);
+unsigned char* bds_put16(unsigned char* cp, WORD x);
 
-WORD get16(unsigned char *cp);
-DWORD  get32(unsigned char *cp);
+WORD bds_get16(unsigned char *cp);
+DWORD  bds_get32(unsigned char *cp);
 
 //计算校验码
 BYTE cal_check_code(
