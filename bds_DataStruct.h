@@ -138,7 +138,7 @@ typedef struct{
 	BYTE manufacturer_code[18];
 	BYTE terminal_model[20];
 	BYTE terminal_id[20];
-    BYTE carrier_code[20];	
+	BYTE carrier_code[20];	
 } terminal_reg, *terminal_reg_p;
 
 //注册应答数据结构
