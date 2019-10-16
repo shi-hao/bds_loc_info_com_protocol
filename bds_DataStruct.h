@@ -143,11 +143,9 @@ typedef struct{
 
 //注册应答数据结构
 typedef struct{
-
 	BYTE res_serial_num[2];
 	BYTE result;
 	BYTE auth_code[40];
-
 } terminal_reg_res, *terminal_reg_res_p;
 
 
